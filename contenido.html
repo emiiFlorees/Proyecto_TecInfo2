@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario Anfibio</title>
+    <link rel="stylesheet" href="contenido.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Descubre el Mundo Anfibio</h1>
+            <p>Pon a prueba tus conocimientos sobre estas fascinantes criaturas.</p>
+        </header>
+
+        <main id="quiz-container">
+            <div id="question-section">
+                <h2 id="question-number">Pregunta 1</h2>
+                <p id="question-text">¿Cuál es el ciclo de vida típico de muchos anfibios?</p>
+                <div class="options">
+                    <button class="option" data-answer="A">A) Huevo - Larva acuática - Adulto terrestre</button>
+                    <button class="option" data-answer="B">B) Huevo - Ninfa - Adulto volador</button>
+                    <button class="option" data-answer="C">C) Huevo - Cría terrestre - Adulto acuático</button>
+                </div>
+            </div>
+
+            <div id="navigation-buttons">
+                <button id="prev-button" disabled>Anterior</button>
+                <button id="next-button">Siguiente</button>
+            </div>
+
+            <div id="results-section" style="display: none;">
+                <h2>Resultados</h2>
+                <p id="score">Obtuviste <span id="final-score">0</span> de <span id="total-questions"></span> respuestas correctas.</p>
+                <button id="restart-button">Intentar de Nuevo</button>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Cuestionario Anfibio Interactivo</p>
+        </footer>
+    </div>
+
+    <script src="contenido.js"></script>
+</body>
+</html>
