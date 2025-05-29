@@ -15,6 +15,12 @@ body {
     padding: 40px;
     width: 80%;
     max-width: 700px;
+    animation: fadeIn 0.5s ease-out; /* Animación al cargar */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 header {
@@ -73,16 +79,48 @@ header p {
     text-align: left;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Transición para hover y selección */
 }
 
 .option:hover {
     background-color: #87ceeb; /* Azul cielo pastel */
+    transform: scale(1.02); /* Ligeramente más grande al pasar el mouse */
 }
 
 .option.selected {
     background-color: #98fb98; /* Verde claro */
     color: #2e8b57; /* Verde mar */
+    animation: pulse 0.5s ease-in-out; /* Animación al seleccionar */
+}
+
+.option.correct {
+    background-color: #aaff80; /* Verde brillante */
+    color: #008000; /* Verde oscuro */
+    animation: pulseCorrect 0.5s ease-in-out;
+}
+
+.option.incorrect {
+    background-color: #ff8080; /* Rojo claro */
+    color: #8b0000; /* Rojo oscuro */
+    animation: pulseIncorrect 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulseCorrect {
+    0% { background-color: #aaff80; transform: scale(1); }
+    50% { background-color: #bfff80; transform: scale(1.05); }
+    100% { background-color: #aaff80; transform: scale(1); }
+}
+
+@keyframes pulseIncorrect {
+    0% { background-color: #ff8080; transform: scale(1); }
+    50% { background-color: #ff9999; transform: scale(1.05); }
+    100% { background-color: #ff8080; transform: scale(1); }
 }
 
 #navigation-buttons {
@@ -98,11 +136,12 @@ header p {
     padding: 12px 20px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 #navigation-buttons button:hover:enabled {
     background-color: #8ac6d1; /* Azul verdoso pastel más oscuro */
+    transform: scale(1.05);
 }
 
 #navigation-buttons button:disabled {
@@ -113,6 +152,12 @@ header p {
 
 #results-section {
     text-align: center;
+    animation: slideInDown 0.4s ease-out; /* Animación al mostrar resultados */
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 #results-section h2 {
@@ -135,11 +180,12 @@ header p {
     padding: 15px 30px;
     font-size: 1.1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 #results-section button:hover {
     background-color: #8fbc8f; /* Verde pastel */
+    transform: scale(1.03);
 }
 
 footer {
@@ -147,4 +193,10 @@ footer {
     margin-top: 30px;
     color: #a7c957; /* Verde oliva pastel */
     font-size: 0.9em;
+    animation: slideInUp 0.4s ease-out; /* Animación al cargar */
+}
+
+@keyframes slideInUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
