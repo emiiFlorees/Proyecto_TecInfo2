@@ -2,38 +2,28 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, #A3D5FF, #B5E7A0);
     text-align: center;
-    padding: 40px; /* Aumentamos el espacio alrededor del contenido */
-}
-
-header {
-    margin-bottom: 30px; /* Añade separación entre el encabezado y el párrafo */
+    padding: 20px;
 }
 
 header h1 {
     color: #004D40;
-    font-size: 28px; /* Tamaño más grande */
 }
 
 p {
     background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     display: inline-block;
-    width: 80%; /* Ancho mayor para evitar que el texto se vea demasiado comprimido */
-    font-size: 18px;
-    line-height: 1.6; /* Espaciado entre líneas para mayor legibilidad */
-    margin-bottom: 40px; /* Agrega más espacio debajo del párrafo */
 }
 
 button {
     background-color: #00796B;
     color: white;
-    padding: 12px 25px;
-    font-size: 18px;
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin: 20px; /* Agregamos separación entre los botones */
 }
 
 button:hover {
